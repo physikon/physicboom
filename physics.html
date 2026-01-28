@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Физика 9 класс</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Физика 9 класс</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="chemistry.html">Химия</a></li>
+        <li><a href="ecology.html">Экология</a></li>
+        <li><a href="informatics.html">Информатика</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Основные формулы</h2>
+    <ul>
+      <li>Скорость: <strong>v = s / t</strong></li>
+      <li>Путь: <strong>s = v * t</strong></li>
+      <li>Сила: <strong>F = m * a</strong></li>
+      <li>Работа: <strong>A = F * s</strong></li>
+    </ul>
+
+    <h2>Интерактивный тест</h2>
+    <p>Скорость равна:</p>
+    <input type="text" id="answer" placeholder="Введите формулу, например s/t">
+    <button onclick="checkAnswer()">Проверить</button>
+    <p id="result"></p>
+
+    <script>
+      function checkAnswer() {
+        let user = document.getElementById('answer').value.toLowerCase().replace(/\s/g,'');
+        if(user === "s/t") {
+          document.getElementById('result').innerText = "✅ Верно!";
+        } else {
+          document.getElementById('result').innerText = "❌ Неверно. Попробуй снова!";
+        }
+      }
+    </script>
+  </main>
+
+  <footer>
+    <p>Создано командой новичков 👩‍💻👨‍💻</p>
+  </footer>
+</body>
+</html>
